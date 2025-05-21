@@ -18,7 +18,7 @@ const SITE_CONFIG = {
     version: '1.0.3'
 };
 
-// API站点配置
+// API站点配置（移除所有成人资源）
 const API_SITES = {
     dyttzy: {
         api: 'http://caiji.dyttzyapi.com',
@@ -103,59 +103,13 @@ const API_SITES = {
     ikun: {
         api: 'https://ikunzyapi.com',
         name: 'iKun资源'
-    },
-    testSource: {
-        api: 'https://www.example.com',
-        name: '空内容测试源',
-        adult: true
-    },
-    ckzy: {
-        api: 'https://www.ckzy1.com',
-        name: 'CK资源',
-        adult: true
-    },
-    jkun: {
-        api: 'https://jkunzyapi.com',
-        name: 'jkun资源',
-        adult: true
-    },
-    bwzy: {
-        api: 'https://api.bwzym3u8.com',
-        name: '百万资源',
-        adult: true
-    },
-    souav: {
-        api: 'https://api.souavzy.vip',
-        name: 'souav资源',
-        adult: true
-    },
-    r155: {
-        api: 'https://155api.com',
-        name: '155资源',
-        adult: true
-    },
-    lsb: {
-        api: 'https://apilsbzy1.com',
-        name: 'lsb资源',
-        adult: true
-    },
-    huangcang: {
-        api: 'https://hsckzy.vip',
-        name: '黄色仓库',
-        adult: true,
-        detail: 'https://hsckzy.vip'
-    },
-    yutu: {
-        api: 'https://yutuzy10.com',
-        name: '玉兔资源',
-        adult: true
     }
 };
 
-// ✅ 添加成人源开关
-const HIDE_BUILTIN_ADULT_APIS = false;
+// ✅ 添加成人源开关（已删除成人源）
+const HIDE_BUILTIN_ADULT_APIS = true;
 
-// ✅ 自动过滤隐藏成人源
+// ✅ 自动过滤隐藏成人源（在此处已经删除所有成人源）
 const getFilteredApiSites = () => {
     return HIDE_BUILTIN_ADULT_APIS
         ? Object.fromEntries(Object.entries(API_SITES).filter(([_, site]) => site.adult !== true))
