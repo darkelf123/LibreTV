@@ -1,4 +1,4 @@
-// 全局常量配置
+// 全局常量配置？
 const PROXY_URL = '/proxy/';
 const SEARCH_HISTORY_KEY = 'videoSearchHistory';
 const MAX_HISTORY_ITEMS = 5;
